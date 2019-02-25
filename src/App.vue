@@ -138,6 +138,9 @@ import MainPage from './components/Mainpage';
 	
 		},
 		computed: {
+            ...mapGetters([
+
+            ]),
             sortedList () {
                 switch(this.sortParam){
                     case 'name': return this.base.sort(sortByName);
