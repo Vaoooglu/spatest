@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="sort">
+      <span>Sort</span>
       <select @input="changeSortParam($event.target.value)">
         <option value='name'>by Name</option>
         <option value='nick'>by Nick</option>
@@ -12,7 +13,6 @@
                :key="item.id"
     >
     </Card>
-
   </div>
 </template>
 
@@ -46,5 +46,9 @@
   }
   .sort{
     position: absolute;
+  }
+  .sort span {
+    vertical-align: baseline;
+    font-size: 16px;
   }
 </style>

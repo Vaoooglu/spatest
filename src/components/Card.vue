@@ -1,13 +1,10 @@
 <template>
- 
   <div class="row">
-    <router-link :to="`${cardData._id}`">
       <p>Name: {{ cardData.name }}</p>
-      <p>Nick:{{ cardData.nick }}</p>
+      <p>Nick: {{ cardData.nick }}</p>
       <p>Age: {{ cardData.age }}</p>
-    </router-link>
+      <router-link :to="`${cardData._id}`">Details</router-link>
   </div>
- 
 </template>
 
 <script>
@@ -32,9 +29,19 @@
     font-size: 1.2rem;
     text-align: center;
     width: 25%;
+    min-width: 180px;
+    min-height: 180px;
   }
   .row a{
-    text-decoration: none;
-    color: black;
-  }
+  padding: 8px;
+  width: 20%;
+  text-align: center;
+  border: 1px solid rgb(48, 174, 224);
+  background-color: rgb(48, 174, 224);
+  text-decoration: none;
+  color: black;
+}
+.row a:hover{
+  background-color: #fff;
+}
 </style>

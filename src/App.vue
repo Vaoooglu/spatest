@@ -10,11 +10,11 @@
   export default {
     methods: {
       ...mapActions([
-        'fetchData'
+        'GET_DATA'
       ]),
     },
     created(){
-      this.fetchData();
+    this.GET_DATA();
     },
   }
 </script>

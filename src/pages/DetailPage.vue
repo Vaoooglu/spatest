@@ -5,27 +5,21 @@
       <p>Nick: {{getFullCard($route.params.id).nick}}</p>
       <p>Age: {{getFullCard($route.params.id).age}}</p>
     </div>
-    <router-link class="back-link" to="/">Back</router-link>
+    <router-link to="/">Back</router-link>
   </div>
 </template>
 <script>
-
   import {mapGetters} from 'vuex';
+  
   export default {
     computed: {
       ...mapGetters([
         'getFullCard'
       ])
     },
-    methods:{
-      
-    },
-    mounted() {
-      console.log(this.getFullCard(this.$route.params.id));
-    }
   }
 </script>
-<style>
+<style scoped>
 .wrapper-detail-page {
     display: flex;
     flex-direction: column;
@@ -35,11 +29,13 @@
     display: block;
     font-size: 1.5rem;
     width: 20%;
+    min-width: 180px;
     text-align: center;
     border: 1px solid black;
     margin:50px 20px;
+    padding: 40px;
 }
-.back-link{
+.container a{
   text-transform: uppercase;
   padding: 8px;
   width: 20%;
@@ -49,7 +45,7 @@
   text-decoration: none;
   color: black;
 }
-.back-link:hover{
+.container a:hover{
   background-color: #fff;
 }
 
